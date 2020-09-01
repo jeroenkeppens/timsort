@@ -1,9 +1,9 @@
 def insertion_sort(array, left=0, right=None):
     if right is None:
         right = len(array) - 1
-    for i in range(left + 1, right + 1):
-        key_item = array[i]
-        j = i - 1
+    for this in range(left + 1, right + 1):
+        key_item = array[this]
+        j = this - 1
         while j >= left and array[j] > key_item:
             array[j + 1] = array[j]
             j -= 1

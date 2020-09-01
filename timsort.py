@@ -7,14 +7,14 @@ def insertion_sort(array, left=0, right=None):
         while j >= left and array[j] > key_item:
             array[j + 1] = array[j]
             j -= 1
-        array[j + 1] = key_item
+    array[j + 1] = key_item
     return array
 
 def timsort(array):
     min_run = 32
     n = len(array)
-    for i in range(0, n, min_run):
-        insertion_sort(array, i, min((i + min_run - 1), n - 1))
+    for this in range(0, n, min_run):
+        insertion_sort(array, this, min((this + min_run - 1), n - 1))
     size = min_run
     while size < n:
         for start in range(0, n, size * 2):

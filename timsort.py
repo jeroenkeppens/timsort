@@ -3,11 +3,11 @@ def insertion_sort(array, left=0, right=None):
         right = len(array) - 1
     for this in range(left + 1, right + 1):
         key_item = array[this]
-        j = this - 1
-        while j >= left and array[j] > key_item:
-            array[j + 1] = array[j]
-            j -= 1
-    array[j + 1] = key_item
+        other = this - 1
+        while other >= left and array[other] > key_item:
+            array[other + 1] = array[other]
+            other -= 1
+    array[other + 1] = key_item
     return array
 
 def timsort(array):

@@ -1,9 +1,9 @@
 def insertion_sort(array, left=0, right=None):
     if right is None:
         right = len(array) - 1
-    for this in range(left + 1, right + 1):
-        key_item = array[this]
-        other = this - 1
+    for i in range(left + 1, right + 1):
+        key_item = array[i]
+        other = i - 1
         while other >= left and array[other] > key_item:
             array[other + 1] = array[other]
             other -= 1
@@ -13,8 +13,8 @@ def insertion_sort(array, left=0, right=None):
 def timsort(array):
     min_run = 32
     n = len(array)
-    for this in range(0, n, min_run):
-        insertion_sort(array, this, min((this + min_run - 1), n - 1))
+    for i in range(0, n, min_run):
+        insertion_sort(array, i, min((i + min_run - 1), n - 1))
     size = min_run
     while size < n:
         for start in range(0, n, size * 2):

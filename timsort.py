@@ -11,6 +11,7 @@ def insertion_sort(array, left=0, right=None):
     return array
 
 def timsort(array):
+    min_run = 32
     n = len(array)
     for i in range(0, n, min_run):
         insertion_sort(array, i, min((i + min_run - 1), n - 1))

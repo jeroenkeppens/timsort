@@ -25,7 +25,7 @@ $ python
 Within the Python interpreter, load the `timsort.py` module:
 
 ```python
->>> import timsort as
+>>> import timsort as t
 ```
 
 You can now call the timsort method as follows
@@ -44,3 +44,17 @@ You can now call the timsort method as follows
 >>> t.timsort([])
 []
 ```
+
+
+## Additional advice
+
+You will find that some versions of this application do not produce correct results.  For example, in the latest version: 
+
+```python
+>>> t.timsort([2,3,1,0])
+[0, 2, 2, 3]
+```
+
+Clearly, this should have produced [0, 1, 2, 3] instead.  At some point in development, a bug was introduced.  Your task is to find the error.
+
+Use `git log` to see the commits.  Review older commits and attempt to run the code in these older commits until you find a version that is not buggy.
